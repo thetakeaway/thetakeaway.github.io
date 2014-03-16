@@ -13,18 +13,23 @@
     		<hr />
     		<div id="headline" align="center">
     			<blockquote></blockquote>
+    			<small class="date" align="center"></small>
 		</div>
     	</div>
     	
     	<script type="text/javascript">
-  		var content;
+  		var lines, content, dates;
 		$.ajax({
   			type: 'GET',
   			url: "content.txt",
   			dataType: "text",
   			success: function(data){
-  			    content = data.split("\n");
+  			    lines = data.split("\n");
+  			    content = lines.split("|")[0];
+  			    dates = lines.split("|")[1];
+  			    
   			    $("blockquote").text(content[0]);
+  			    $(".date").text(dates[0]);
 			}
 		});
     	</script>
