@@ -1,5 +1,5 @@
 body {
-  font-family: "Exo", sans-serif;
+  
 }
 
 #wrapper {
@@ -29,6 +29,8 @@ blockquote {
   padding: 0.5em 10px;
   quotes: "\201C" "\201D" "\2018" "\2019";
   font-style: italic;
+  font-size: 2em;
+  font-family: "Merriweather", serif;
 }
 
 blockquote:before {
