@@ -25,8 +25,8 @@
   			dataType: "text",
   			success: function(data){
   			    lines = data.split("\n");
-  			    content = lines.split("|")[0];
-  			    dates = lines.split("|")[1];
+  			    content = lines[0].split("|");
+  			    dates = lines[1].split("|");
   			    
   			    $("blockquote").text(content[0]);
   			    $(".date").text(dates[0]);
