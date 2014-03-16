@@ -23,7 +23,7 @@
   			url: "content.txt",
   			dataType: "text",
   			success: function(data){
-  			    content = txt.split("\n");
+  			    content = data.split("\n");
   			    $("blockquote").text(content[0]);
 			}
 		});
