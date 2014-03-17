@@ -26,11 +26,12 @@ hr {
 }
 
 blockquote {
-  padding: 0.5em 10px;
+  padding: 0.5em;
   quotes: "\201C" "\201D" "\2018" "\2019";
   font-style: italic;
   font-size: 2em;
   font-family: "Merriweather", serif;
+  margin-bottom: 12px;
 }
 
 blockquote:before {
