@@ -50,7 +50,8 @@ blockquote:before {
 
 .quote {
   font-family: "Merriweather", serif;
-  font-size: 1.5em;
+  font-size: 1.3em;
+  font-style: italic;
 }
 
 .date {
