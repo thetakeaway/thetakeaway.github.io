@@ -25,13 +25,31 @@
   			dataType: "text",
   			success: function(data){
   			    lines = data.split("\n");
-  			    content = lines[0].split("|");
-  			    dates = lines[1].split("|");
+  			    content = lines.split("|").nth(2,0);
+  			    dates = lines.split("|").nth(2,1);
   			    
   			    $("blockquote").text(content[0]);
   			    $(".date").text(dates[0]);
 			}
 		});
+		
+		Array.prototype.split = function(a){
+			var b = [];
+			for(i=0;i<this.length;i++){
+				for(j=0;j<this[i].split(a).length;j++){
+					b.push(this[i].split(a)[j]);
+				}
+			}
+			return b;
+		}
+		
+		Array.prototype.nth = function(a,b){
+			var c = [];
+			for(i=0;i<this.length;i++){
+				if(i%a==0){c.push(this[i+b]);}
+			}
+			return c;
+		}
     	</script>
     	
 	</body>
