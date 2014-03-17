@@ -13,7 +13,8 @@
     		<hr />
     		<div id="headline" align="center">
     			<blockquote></blockquote>
-    			<small class="date" align="center"></small>
+    			<small id="date" align="center"></small><br />
+    			<div id="more"></div>
 		</div>
     	</div>
     	
@@ -29,9 +30,17 @@
   			    dates = lines.split("|").nth(2,1);
   			    
   			    $("blockquote").text(content[0]);
-  			    $(".date").text(dates[0]);
+  			    $("#date").text(dates[0]);
+  			    
+  			    appendItems(content.slice(1,Infinity),dates.slice(1,Infinity));
 			}
 		});
+		
+		function appendItems(content, dates){
+			for(i=0;i<content.length;i++){
+				$("#more").append('<span class="quote">'+content[i]+'</span><span class="date">'+dates[i]+'</span><br />');
+			}
+		}
 		
 		Array.prototype.split = function(a){
 			var b = [];
@@ -42,7 +51,6 @@
 			}
 			return b;
 		}
-		
 		Array.prototype.nth = function(a,b){
 			var c = [];
 			for(i=0;i<this.length;i++){
