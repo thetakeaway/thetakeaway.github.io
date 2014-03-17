@@ -26,7 +26,8 @@
   			url: "content.txt",
   			dataType: "text",
   			success: function(data){
-  			    lines = data.split("\n").splice(0,data.length-1);
+  			    lines = data.split("\n");
+  			    lines = lines.splice(0,lines.length-1);
   			    content = lines.split("|").nth(2,0);
   			    dates = lines.split("|").nth(2,1);
   			    
