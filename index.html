@@ -32,13 +32,13 @@
   			    $("blockquote").text(content[0]);
   			    $("#date").text(dates[0]);
   			    
-  			    appendItems(content.slice(1,Infinity),dates.slice(1,Infinity));
+  			    appendOtherItems(content.slice(1,Infinity),dates.slice(1,Infinity));
 			}
 		});
 		
-		function appendItems(content, dates){
+		function appendOtherItems(content, dates){
 			for(i=0;i<content.length;i++){
-				$("#more").append('<span class="quote">'+content[i]+'</span><span class="date">'+dates[i]+'</span><br />');
+				$("#more").append('<span class="quote">'+content[i]+'</span>&nbsp;&nbsp;<span class="date">'+dates[i]+'</span><br />');
 			}
 		}
 		
