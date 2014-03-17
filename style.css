@@ -47,3 +47,14 @@ blockquote:before {
   font-size: 1em;
   color: #ccc;
 }
+
+.quote {
+  font-family: "Merriweather", serif;
+  font-size: 1.5em;
+}
+
+.date {
+  font-family: Monospace;
+  font-size: 1em;
+  color: #ccc;
+}
